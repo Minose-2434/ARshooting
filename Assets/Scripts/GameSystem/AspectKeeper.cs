@@ -5,12 +5,15 @@ using UnityEngine;
 [ExecuteAlways]
 public class AspectKeeper : MonoBehaviour
 {
-    [SerializeField]
-    private Camera targetCamera; //対象とするカメラ
+    #region serialize field
+    [SerializeField, Header("カメラオブジェクト")]
+    private Camera targetCamera;
 
-    [SerializeField]
-    private Vector2 aspectVec; //目的解像度
+    [SerializeField, Header("目的解像度")]
+    private Vector2 aspectVec;
+    #endregion
 
+    #region Unity function
     // Update is called once per frame
     void Update()
     {
@@ -34,4 +37,5 @@ public class AspectKeeper : MonoBehaviour
 
         targetCamera.rect = viewportRect; //カメラのViewportに適用
     }
+    #endregion
 }

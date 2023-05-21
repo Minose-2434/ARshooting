@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class CameraImageRendering : MonoBehaviour
 {
-    [SerializeField]
-    private RawImage rawImage;  //カメラから取得した映像を表示する
+    #region serialize field
+    [SerializeField, Header("カメラから取得した映像を表示する")]
+    private RawImage rawImage;
+    #endregion
 
-    WebCamTexture webCam;  //Webカメラ
+    #region private field
+    private WebCamTexture webCam;  //Webカメラ
+    #endregion
 
+    #region Unity function
     // Update is called once per frame
     void Start()
     {
@@ -20,4 +25,5 @@ public class CameraImageRendering : MonoBehaviour
         //カメラ表示開始
         webCam.Play();
     }
+    #endregion
 }
