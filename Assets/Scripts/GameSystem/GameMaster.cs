@@ -29,6 +29,9 @@ public class GameMaster : MonoBehaviour
     /// <summary> スコアを表記するテキスト </summary>
     [SerializeField, Header("スコアテキスト")]
     private Text scoreText;
+    /// <summary> 負けた時のCanvas </summary>
+    [SerializeField, Header("LoseCanvas")]
+    private GameObject loseCanvas;
     #endregion
 
     #region public field
@@ -72,19 +75,22 @@ public class GameMaster : MonoBehaviour
                 break;
             //ゲームプレイ状態
             case GAME_STATE.Play:
-                gameTimer += Time.deltaTime;
                 ScoreUpdate();
                 break;
             //ゲーム中断
             case GAME_STATE.Pose:
                 break;
             case GAME_STATE.Lose:
+                LoseCanvasCreate();
                 break;
         }
     }
     #endregion
 
     #region private function
+    /// <summary>
+    /// ゲーム開始前のカウントダウンを行うメソッド
+    /// </summary>
     private void CountDown()
     {
         int _count = 3 - (int)gameTimer;
@@ -104,9 +110,18 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// スコアを表示するメソッド
+    /// </summary>
     private void ScoreUpdate()
     {
         scoreText.text = gameScore.ToString();
+    }
+
+    private void LoseCanvasCreate()
+    {
+        GameObject _canvas = Instantiate(loseCanvas, new Vector3(0,0,0), new Quaternion(0,0,0,0));
+        gameState = GAME_STATE.Pose;
     }
     #endregion
 }

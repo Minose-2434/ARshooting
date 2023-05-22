@@ -61,6 +61,11 @@ public class Enemy : MonoBehaviour
         float _sin = Mathf.Sin(2 * Mathf.PI * enemyTimer * 0.5f + Mathf.PI / 2);
         _speed += this.transform.forward * frontSpeed + this.transform.right * rightSpeed * _sin + this.transform.up * upSpeed * _sin;
         this.transform.position += _speed * Time.deltaTime;
+        if(this.transform.position.z < 0)
+        {
+            GameMaster.instance.gameState = GameMaster.GAME_STATE.Lose;
+            Destroy(this.gameObject);
+        }
     }
     #endregion
 }
