@@ -32,6 +32,9 @@ public class GameMaster : MonoBehaviour
     /// <summary> 負けた時のCanvas </summary>
     [SerializeField, Header("LoseCanvas")]
     private GameObject loseCanvas;
+    /// <summary> プレイヤーのカメラオブジェクト </summary>
+    [SerializeField, Header("カメラオブジェクト")]
+    private GameObject playerCamera;
     #endregion
 
     #region public field
@@ -106,6 +109,7 @@ public class GameMaster : MonoBehaviour
         {
             countText.text = "";
             gameTimer = 0;
+            playerCamera.GetComponent<PlayerController>().CameraReset();
             gameState = GAME_STATE.Play;
         }
     }

@@ -37,7 +37,7 @@ public class EnemyCreate : MonoBehaviour
     }
     #endregion
 
-    #region Unity function
+    #region private function
     /// <summary>
     /// スコアに応じて敵生成を行うメソッド
     /// </summary>
@@ -125,7 +125,7 @@ public class EnemyCreate : MonoBehaviour
     private void Create(GameObject enemyKind)
     {
         GameObject _enemy = Instantiate(enemyKind, enemysPrefab.transform);
-        _enemy.transform.position = new Vector3(Random.Range(-10f, 10f), Random.Range(-5.5f, 5.5f), 10f);
+        _enemy.transform.position = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 10f);
         _enemy.transform.LookAt(Vector3.zero);
     }
     #endregion
