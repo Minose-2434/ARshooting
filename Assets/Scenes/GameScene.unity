@@ -672,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2176a202ca5bd04590c960978b9a479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8634594008708063995, guid: 1560569879f027d498c3d39b0c734c42, type: 3}
+  bulletPrefab: {fileID: 2122793206234583377, guid: 94062ac40d6ba79418cc67e21c9e283d, type: 3}
   playerCamera: {fileID: 1428451589}
 --- !u!114 &1428451591
 MonoBehaviour:
