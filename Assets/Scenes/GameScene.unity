@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &29587585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 866155514487044567, guid: 9965f326656cb264e93bafe8ce4de6c2, type: 3}
+  m_PrefabInstance: {fileID: 1397538942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &71793015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -623,7 +628,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 866155514487044561, guid: 9965f326656cb264e93bafe8ce4de6c2, type: 3}
   m_PrefabInstance: {fileID: 1397538942}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 29587585}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -634,12 +639,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 866155513797502039, guid: 9965f326656cb264e93bafe8ce4de6c2, type: 3}
   m_PrefabInstance: {fileID: 1397538942}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1682355844}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1397538946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29587585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1428451589
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +775,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1682355844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 866155513797502036, guid: 9965f326656cb264e93bafe8ce4de6c2, type: 3}
+  m_PrefabInstance: {fileID: 1397538942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1682355846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682355844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1385106571154045158
 PrefabInstance:
   m_ObjectHideFlags: 0

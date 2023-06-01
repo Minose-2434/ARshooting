@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c7343de9dcea446a2a8d2da2a37ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 4250582973506026381, guid: 1bad82bae54e5264c960642fbab999d4, type: 3}
   startCanvas: {fileID: 2409025727500322671}
 --- !u!1 &2409025727500322671
 GameObject:
@@ -344,6 +343,7 @@ GameObject:
   - component: {fileID: 9132151587360234913}
   - component: {fileID: 2400677801789442885}
   - component: {fileID: 7643375240505638142}
+  - component: {fileID: 2288073874484442788}
   m_Layer: 5
   m_Name: GameOverText
   m_TagString: Untagged
@@ -415,6 +415,21 @@ MonoBehaviour:
   m_Text: 'Game
 
     Over'
+--- !u!114 &2288073874484442788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022313189504005407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5602317460402352657
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC\u3078"
+  m_Text: "\u30EA\u30B6\u30EB\u30C8"
 --- !u!1 &6638237090369284836
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +522,7 @@ GameObject:
   - component: {fileID: 8276834653558387318}
   - component: {fileID: 7156085810970545567}
   - component: {fileID: 8219340754676258024}
+  - component: {fileID: 1022122697003951874}
   m_Layer: 5
   m_Name: LoseButton
   m_TagString: Untagged
@@ -616,7 +632,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7156085810970545567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1022122697003951874}
+        m_TargetAssemblyTypeName: GaneOverButton, Assembly-CSharp
+        m_MethodName: OnClickGameOverButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1022122697003951874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638237090369284836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af28af93fe720a04ea48b691d9c1c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9014584425326555879
 GameObject:
   m_ObjectHideFlags: 0
