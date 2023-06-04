@@ -78,7 +78,6 @@ public class GameMaster : MonoBehaviour
                 break;
             //ゲームプレイ状態
             case GAME_STATE.Play:
-                ScoreUpdate();
                 break;
             //ゲーム中断
             case GAME_STATE.Pose:
@@ -112,14 +111,6 @@ public class GameMaster : MonoBehaviour
             playerCamera.GetComponent<PlayerController>().CameraReset();
             gameState = GAME_STATE.Play;
         }
-    }
-
-    /// <summary>
-    /// スコアを表示するメソッド
-    /// </summary>
-    private void ScoreUpdate()
-    {
-        scoreText.text = gameScore.ToString();
     }
 
     private void LoseCanvasCreate()

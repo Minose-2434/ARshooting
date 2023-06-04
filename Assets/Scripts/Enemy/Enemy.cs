@@ -25,7 +25,16 @@ public class Enemy : MonoBehaviour
     #endregion
 
     #region Unity function
-    // Update is called once per frame
+    
+    void Start()
+    {
+        if(Random.Range(0f, 1f) <= 0.5f)
+        {
+            rightSpeed *= -1;
+            upSpeed *= -1;
+        }
+    }
+
     void Update()
     {
         if(GameMaster.instance.gameState == GameMaster.GAME_STATE.Play)
