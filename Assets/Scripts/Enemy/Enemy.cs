@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     private int enemyScore;
     /// <summary> 正面方向の速度 </summary>
     [SerializeField, Header("前方速度")]
-    private float frontSpeed;
+    public float frontSpeed;
     /// <summary> 左右方向の速度 </summary>
     [SerializeField, Header("左右速度")]
     private float rightSpeed;
@@ -46,13 +46,13 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// 弾が当たった時スコアを足して消える
     /// </summary>
-    /// <param name="collision"> 当たった物のcollision </param>
-    void OnCollisionEnter(Collision collision)
+    /// <param name="collider"> 当たった物のcollider </param>
+    void OnTriggerEnter(Collider collider)
     {
-        if(collision.gameObject.tag == "Bullet")
+        if(collider.gameObject.tag == "Bullet")
         {
             GameMaster.instance.gameScore += enemyScore;
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
             GameMaster.instance.enemyNum -= 1;
             Destroy(this.gameObject);
         }
@@ -73,6 +73,7 @@ public class Enemy : MonoBehaviour
         if(this.transform.position.z < 0)
         {
             GameMaster.instance.gameState = GameMaster.GAME_STATE.Lose;
+            GameMaster.instance.enemyNum -= 1;
             Destroy(this.gameObject);
         }
     }

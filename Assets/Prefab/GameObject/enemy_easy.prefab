@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 3406810339653031986}
   - component: {fileID: 3406810339653031984}
   - component: {fileID: 3406810339653031987}
+  - component: {fileID: 406929552}
   m_Layer: 0
   m_Name: enemy_easy
   m_TagString: Untagged
@@ -208,6 +209,19 @@ MonoBehaviour:
   frontSpeed: 5
   rightSpeed: 0
   upSpeed: 0
+--- !u!114 &406929552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2559735799318335752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c414447253bb7d14bb3647ae0b4a70f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &2741040564003216567
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +345,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2852609040469329969}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1

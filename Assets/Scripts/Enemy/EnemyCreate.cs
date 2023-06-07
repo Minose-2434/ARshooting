@@ -23,7 +23,7 @@ public class EnemyCreate : MonoBehaviour
     /// <summary> “G¶¬‚ğ§Œä‚·‚é‚½‚ß‚ÌŠÔ </summary>
     private float enemyTimer;
     /// <summary> “G¶¬‚ğ‚·‚éŠÔ </summary>
-    private float createTime = 1.0f;
+    private float createTime = 2.0f;
     #endregion
 
     #region Unity function
@@ -96,7 +96,7 @@ public class EnemyCreate : MonoBehaviour
                 }
                 break;
             default:
-                if (_enemyNum == 0 || enemyTimer > createTime/2)
+                if (_enemyNum == 0 || enemyTimer > createTime/(_score / 1000 - 3))
                 {
                     //“G‚Ì¶¬
                     switch (Random.Range(0, 3))
