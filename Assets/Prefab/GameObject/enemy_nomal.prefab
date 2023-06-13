@@ -279,8 +279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyScore: 100
   frontSpeed: 5
-  rightSpeed: 0
-  upSpeed: 5
+  rightSpeed: 5
+  upSpeed: 0
 --- !u!1 &3351954923531876188
 GameObject:
   m_ObjectHideFlags: 0

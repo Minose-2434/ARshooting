@@ -96,7 +96,7 @@ public class EnemyCreate : MonoBehaviour
                 }
                 break;
             default:
-                if (_enemyNum == 0 || enemyTimer > createTime/(_score / 1000 - 3))
+                if (_enemyNum == 0 || enemyTimer > TangentTimer((float)_score/1000))
                 {
                     //敵の生成
                     switch (Random.Range(0, 3))
@@ -127,6 +127,16 @@ public class EnemyCreate : MonoBehaviour
         GameObject _enemy = Instantiate(enemyKind, enemysPrefab.transform);
         _enemy.transform.position = new Vector3(Random.Range(-5f, 5f), Random.Range(-3f, 3f), 10f);
         _enemy.transform.LookAt(Vector3.zero);
+    }
+
+    /// <summary>
+    /// 敵生成の時間をスコアに応じて変更するメソッド
+    /// </summary>
+    /// <param name="x"> スコアを1000で割った数字 </param>
+    /// <returns> 敵生成をする時間 </returns>
+    private float TangentTimer(float x)
+    {
+        return -2 * Mathf.Atan(x - 8) / Mathf.PI + 1;
     }
     #endregion
 }

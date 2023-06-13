@@ -33,12 +33,13 @@ public class EnemyEasyState : MonoBehaviour
     /// <summary> 確率で移動ステータスを変更するメソッド </summary>
     private void StateChange()
     {
+        float _random = Random.Range(0f, 1f);
         if (change)
         {
             enemy.frontSpeed = moveState;
             change = false;
         }
-        else if(Random.Range(0f, 1f) < (GameMaster.instance.gameScore - 3000) / 10000)
+        else if(_random < (float)(GameMaster.instance.gameScore) / 10000)
         {
             enemy.frontSpeed = moveState + Random.Range(5, 10);
             change = true;

@@ -419,7 +419,6 @@ MonoBehaviour:
   enemyOnePrefab: {fileID: 2559735799318335752, guid: d87d117df3159464cb555829bd963c0c, type: 3}
   enemyTwoPrefab: {fileID: 3068090256025415269, guid: 6236f873ada1f6242b939a35e1b8e8f4, type: 3}
   enemyThreePrefab: {fileID: 8693434416728402355, guid: 176c680df95306b4d8fe36113c23e330, type: 3}
-  enemyTimer: 0
 --- !u!4 &821953742
 Transform:
   m_ObjectHideFlags: 0
